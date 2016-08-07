@@ -14,8 +14,8 @@
 
 
 def any_lowercase1(s):
-    """Explain what is wrong, if anything, here.
-    """
+    """returns True when finds the first lowercase letter in a sting, or False
+    when doesn't find any. Should work"""
     for c in s:
         if c.islower():
             return True
@@ -24,7 +24,9 @@ def any_lowercase1(s):
 
 
 def any_lowercase2(s):
-    """Explain what is wrong, if anything, here.
+    """'c' in the if-statement is not a variable, but an actual lowercase letter 'c'.
+    The return statement will be a string 'True' regardless of the value of the string s.
+    (In addition, True and False are not booleans here, but strings)
     """
     for c in s:
         if 'c'.islower():
@@ -34,7 +36,7 @@ def any_lowercase2(s):
 
 
 def any_lowercase3(s):
-    """Explain what is wrong, if anything, here.
+    """Should work
     """
     for c in s:
         flag = c.islower()
@@ -42,7 +44,7 @@ def any_lowercase3(s):
 
 
 def any_lowercase4(s):
-    """Explain what is wrong, if anything, here.
+    """This code should work. Although, it is not the most straiforward way to do it
     """
     flag = False
     for c in s:
@@ -51,7 +53,8 @@ def any_lowercase4(s):
 
 
 def any_lowercase5(s):
-    """Explain what is wrong, if anything, here.
+    """returns False if the 1st letter is capital. I would remove 'not'
+    and replace False with True and True with False.
     """
     for c in s:
         if not c.islower():
@@ -65,8 +68,10 @@ def main():
     # Remove print("Hello World!") and for each function above that is wrong,
     # call that function with a string for which the function returns
     # incorrectly.
-    # ex.: any_lowercase_("thisstringmessesupthefunction")
-    print("Hello World!")
+    any_lowercase1("thisstringmessesupthefunction")
+    any_lowercase2("thisstringmessesupthefunction")
+    any_lowercase5("thisstringmessesupthefunction")
+
 
 
 if __name__ == '__main__':

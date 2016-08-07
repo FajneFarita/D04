@@ -21,15 +21,31 @@
 
 ###############################################################################
 # Imports
-
+import math
 
 # Body
+print("Let's do some math! Give me an example and I will evaluate it. Print DONE when you want to stop.")
+def eval_loop():
+    while True:
+        example = input("Here your example goes: ")
+        if example.lower() == 'done':
+            print("Bye-bye!")
+            break
+        try:
+            result = eval(example)
+        except:
+            print("Not a valid input. Try again")
+            continue
+        print(result)
+
+
+
+
 
 
 ###############################################################################
 def main():
-    pass  # Remove this line and uncomment below once eval_loop is defined.
-    # eval_loop()
+    eval_loop()
 
 if __name__ == '__main__':
     main()
